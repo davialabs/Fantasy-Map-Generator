@@ -1,4 +1,4 @@
-import { quadtree } from "d3-quadtree";
+import { quadtree } from "d3";
 import { byId, each, gauss, minmax, normalize, P, rn } from "../utils";
 
 declare global {

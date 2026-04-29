@@ -1,5 +1,27 @@
 # Fantasy Map Generator
 
+## Davia patches over Azgaar
+
+Reference Azgaar version: 1.120.1.
+
+### CSS overrides (`src/tale-overlay.css`)
+
+- None yet. Phase 1 only adds the stylesheet hook.
+
+### Globals Azgaar used (`src/tale-bridge.ts`)
+
+- None yet. Phase 1 only emits the `editorReady` handshake.
+
+### Modifications to `src/index.html`
+
+- Added `<link rel="stylesheet" href="/tale-overlay.css" />` before `</head>`.
+- Added `<div id="tale-toolbar-host"></div>` after `svg#map`.
+- Added `<script type="module" src="/tale-bridge.ts"></script>` after the legacy deferred scripts.
+
+### Compatibility patches
+
+- `src/modules/burgs-generator.ts` imports `quadtree` from `d3`, matching the other migrated modules and keeping Bun workspace builds resolvable.
+
 Azgaar's _Fantasy Map Generator_ is a free web application that helps fantasy writers, game masters, and cartographers create and edit fantasy maps.
 
 Link: [azgaar.github.io/Fantasy-Map-Generator](https://azgaar.github.io/Fantasy-Map-Generator).
