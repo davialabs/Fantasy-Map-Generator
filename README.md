@@ -8,15 +8,14 @@ Reference Azgaar version: 1.120.1.
 
 - None yet. Phase 1 only adds the stylesheet hook.
 
-### Globals Azgaar used (`src/tale-bridge.ts`)
+### Globals Azgaar used
 
-- None yet. Phase 1 only emits the `editorReady` handshake.
+- None yet. Will be wired from the Davia toolbar in Phase 2.
 
 ### Modifications to `src/index.html`
 
 - Added `<link rel="stylesheet" href="/tale-overlay.css" />` before `</head>`.
-- Added `<div id="tale-toolbar-host"></div>` after `svg#map`.
-- Added `<script type="module" src="/tale-bridge.ts"></script>` after the legacy deferred scripts.
+- Added `<div id="tale-toolbar-host"></div>` after `svg#map` (mount point for the Davia toolbar in Phase 2).
 
 ### Compatibility patches
 
